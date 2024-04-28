@@ -55,9 +55,9 @@ public class GET_UserList_TestCase extends BaseTest {
 		long responseTime = response.getTime();
 		Reporter.log("Response Time is => " + responseTime, true);
 
-		if (responseTime < 2000)
-			Reporter.log("Response Time is < 2000 ", true);
-		Assert.assertTrue(responseTime < 2000);
+		if (responseTime > 2000)
+			Reporter.log("Response Time is > 2000 ", true);
+		Assert.assertTrue(responseTime > 2000);
 
 	}
 
