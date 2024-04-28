@@ -59,6 +59,22 @@ public class PATCH_UpdateUser_TestCase extends BaseTest {
 		Reporter.log("Status Line is => " + statusLine);
 		System.out.println("Status Line is => " + statusLine);
 	}
+	
+	@Test
+	void checkContentType() {
+		String contentType = response.getContentType();
+		Reporter.log("Content Type is => " + contentType, true);
+		Assert.assertTrue(contentType != null);
+
+	}
+
+	@Test
+	void checkServerType() {
+		String serverType = response.getHeader("Server");
+		Reporter.log("Server Type is => " + serverType, true);
+		Assert.assertTrue(serverType != null);
+
+	}
 
 //				@Test
 //				void checkSuccessCode() {
